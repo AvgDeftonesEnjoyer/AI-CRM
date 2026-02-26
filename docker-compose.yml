@@ -23,6 +23,7 @@ services:
       - "8000:8000"
     environment:
       DATABASE_URL: postgresql+asyncpg://postgres:postgres@db:5432/crm_leads
+      SECRET_KEY: ${SECRET_KEY:-dev-secret-key-change-in-production-32c}
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
       DEBUG: "true"
     depends_on:
